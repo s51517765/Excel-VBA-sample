@@ -126,7 +126,7 @@ Sub AddNewBook()
         With NewBook
             .Title = "Title"                'プロパティに設定
             .Subject = "Subject"            'プロパティに設定
-            .SaveAs Filename:="New.xlsx"    '指定しないとデスクトップに作成
+            .SaveAs filename:="New.xlsx"    '指定しないとデスクトップに作成
             
             'ここでBookへの書き込み処理
             Cells(1, 1).Value = "New"
@@ -135,19 +135,31 @@ Sub AddNewBook()
 End Sub
 
 Sub ExistingBookOpen()
-    Dim FilePath, Filename As String
+    Dim FilePath, filename As String
     FilePath = Application.GetOpenFilename("Microsoft Excelブック,*.xls?")
 
     Workbooks.Open FilePath
     
     '指定したファイルが存在したときそのファイル名を返す
-    Filename = Dir(FilePath)
+    filename = Dir(FilePath)
     
     Dim aaa As String
-    Workbooks(Filename).Worksheets("Sheet1").Range("A1").Value = "A1"
+    Workbooks(filename).Worksheets("Sheet1").Range("A1").Value = "A1"
     
     '上書き保存して閉じる
-    Workbooks(Filename).Save
-    Workbooks(Filename).Close
+    Workbooks(filename).Save
+    Workbooks(filename).Close
+
+End Sub
+
+Sub WriteTextFile()
+
+    Dim filename As String
+    filename = ThisWorkbook.Path & "\output.txt"            'PERSONALマクロブックで動かすとき、出力先注意
+
+    Open filename For Output As #1
+        Print #1, "ABCDE"
+        Print #1, "12345"
+    Close #1
 
 End Sub

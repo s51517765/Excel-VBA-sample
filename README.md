@@ -13,16 +13,19 @@
   - その他のbookに出力 [link](code/fileIO.bas#L137)
 - テキストファイルに出力 [link](code/fileIO.bas#L155)
 
-### 時刻を取得する
+### 時間・時刻を取得する
 - 時間を計測する [link](code/time.bas#L7)
 - 現在時刻を取得する [link](code/time.bas#L22)
 
 ### 文字列を扱う
-- デリミタで分割して配列に格納
-- 配列の文字列を結合する
+- デリミタで分割して配列に格納 [link](code/strings.bas#L5)
+- 文字列を結合する [link](code/strings.bas#L16)
+- 配列の文字列を結合する [link](code/strings.bas#L24)
 - 文字列を数値に変換する
-  - 10進数
-  - 16進数
+  - 10進数 [link](code/strings.bas#L31)
+  - 16進数 [link](code/strings.bas#L43)
+- 16進数を10進数に変換 [link](code/strings.bas#L57)
+- 10進数を16進数に変換 [link](code/strings.bas#L80)
 
 ### 正規表現
 - 文字列から数値を取得

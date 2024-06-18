@@ -29,7 +29,14 @@
 
 ### 正規表現
 - 文字列から数値を取得
+  - 整数 [link](code/regex.bas#L5)
+  - 小数 [link](code/regex.bas#L21)
 - 文字列から16進文字列取得
+  - 0xがない場合 [link](code/regex.bas#L37)
+  - 0xがある場合 [link](code/regex.bas#L53)
+- 文字列を置換
+  - 対称文字を削除 [link](code/regex.bas#L69)
+  - 対称文字を置き換え [link](code/regex.bas#L78)
 
 ### グラフの整形
 
